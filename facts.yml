@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - name: install update (apt)
+      when: ansible_distribution == "Debian"
+      package:
+        name: apache2
+        state: latest
+...
